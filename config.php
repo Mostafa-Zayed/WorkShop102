@@ -34,4 +34,6 @@ defined('INCLUDE_PATH') || define('INCLUDE_PATH',APPLICATION_PATH.'includes'.DS)
 // Core Path
 defined('CORE_PATH') || define('CORE_PATH',APPLICATION_PATH.'core'.DS);
 
+// Admin Path
+defined('ADMIN_PATH') || define('ADMIN_PATH',APPLICATION_PATH.'admin'.DS);
 ?>

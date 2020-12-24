@@ -1,4 +1,4 @@
-<?php include_once 'config.php'; ?>
+<?php include_once 'app.php'; ?>
 <?php include_once  INCLUDE_PATH.'header.php'; ?>
 
     <!-- ***** Breadcrumb Area Start ***** -->
