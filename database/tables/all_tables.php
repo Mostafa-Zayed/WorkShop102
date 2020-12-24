@@ -6,9 +6,5 @@ foreach($files as $file) {
 	}
 	require_once $file;
 }
-/*
-echo '<pre>';
-print_r($files);
-echo '</pre>';
-*/
+
 ?>

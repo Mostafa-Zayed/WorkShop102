@@ -21,16 +21,17 @@ defined('WEBSITE_URL') || define('WEBSITE_URL','http://'.$_SERVER['HTTP_HOST'].d
 // FrontEnd Assets Url
 defined('FRONTEND_ASSETS_URL') || define('FRONTEND_ASSETS_URL',WEBSITE_URL.'assets');
 
+
 // Application Path
 defined('APPLICATION_PATH') || define('APPLICATION_PATH',__DIR__.DS);
 
 // Database Path
 defined('DATABASE_PATH') || define('DATABASE_PATH',APPLICATION_PATH.'database'.DS);
 
-
 // Includes Path
 defined('INCLUDE_PATH') || define('INCLUDE_PATH',APPLICATION_PATH.'includes'.DS);
 
-
+// Core Path
+defined('CORE_PATH') || define('CORE_PATH',APPLICATION_PATH.'core'.DS);
 
 ?>

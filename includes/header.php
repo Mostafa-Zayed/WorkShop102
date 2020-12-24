@@ -53,13 +53,11 @@
                         <!-- Nav Start -->
                         <div class="classynav">
                             <ul id="nav">
-                                <li class="current-item"><a href="index.html">Home</a></li>
-                                <li><a href="services.html">Services</a></li>
-                                   
-                                <li><a href="portfolio.html">Portfolio</a></li>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li class="current-item"><a href="index.php">Home</a></li>
+                                <li><a href="services.php">Services</a></li>
+                                <li><a href="portfolio.php">Portfolio</a></li>
+                                <li><a href="about.php">About</a></li>
+                                <li><a href="contact.php">Contact</a></li>
                             </ul>
                             <!-- Get A Quote -->
                             <div class="get-a-quote ml-4 mr-3">

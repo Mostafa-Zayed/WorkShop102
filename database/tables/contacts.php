@@ -2,7 +2,7 @@
 
 include_once '../../config.php'; 
 
-include_once DATABASE_PATH.'/connect.php'; 
+include_once CORE_PATH.'/connect.php'; 
 
 // Sql Statment
 $sql = "CREATE TABLE IF NOT EXISTS `contacts` (
