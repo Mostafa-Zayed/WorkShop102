@@ -1,5 +1,5 @@
 <?php include_once 'app.php'; ?>
-<?php include_once  INCLUDE_PATH.'header.php'; ?>
+<?php include_once  APP_INCLUDE_PATH.'header.php'; ?>
 
     <!-- ***** Breadcrumb Area Start ***** -->
     <div class="breadcrumb-area">
@@ -117,5 +117,5 @@
         </div>
     </section>
     <!-- ***** Contact Area End ***** -->
-<?php include_once INCLUDE_PATH.'footer.php'; ?>
+<?php include_once APP_INCLUDE_PATH.'footer.php'; ?>
    

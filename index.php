@@ -1,7 +1,6 @@
 <?php include_once 'app.php'; ?>
-<?php include_once  INCLUDE_PATH.'header.php'; ?>
-<?php $users = get_data('users'); ?>
-<?php showData($users); ?>
+<?php include_once  APP_INCLUDES_PATH.'header.php'; ?>
+
     <!-- ***** Welcome Area Start ***** -->
     <section class="welcome-area">
         <div class="welcome-slides owl-carousel">
@@ -410,4 +409,4 @@
         </div>
     </section>
     <!-- ***** CTA, Testimonial & CFA Area End ***** -->
-<?php include_once INCLUDE_PATH.'footer.php'; ?>
+<?php include_once APP_INCLUDES_PATH.'footer.php'; ?>

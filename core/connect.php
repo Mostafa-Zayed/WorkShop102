@@ -1,5 +1,6 @@
 <?php 
 
+
 // Connect To Database
 $connection = mysqli_connect(SERVER_NAME,DATABASE_USER,DATABASE_PASSWORD,DATABASE_NAME);
 

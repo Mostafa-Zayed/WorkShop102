@@ -12,7 +12,7 @@
     <title>Uza - Home Page</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="<?=FRONTEND_ASSETS_URL?>assets/img/core-img/favicon.ico">
+    <link rel="icon" href="<?=FRONTEND_ASSETS_URL?>img/core-img/favicon.ico">
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="<?=FRONTEND_ASSETS_URL?>/style.css">
