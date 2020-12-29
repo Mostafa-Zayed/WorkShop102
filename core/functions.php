@@ -13,6 +13,7 @@ function get_data(string $tableName, $columns = '*', $condition = '') {
 	}else {
 		$sql_statment = "SELECT $columns FROM `$tableName` WHERE $condition";	
 	}
+	
 
 	$result = mysqli_query($connection,$sql_statment);
 	if(mysqli_num_rows($result) > 0 ) 

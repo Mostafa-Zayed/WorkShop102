@@ -4,7 +4,7 @@
 defined('SERVER_NAME') || define('SERVER_NAME',$_SERVER['HTTP_HOST']);
 
 // Dabase Name
-defined('DATABASE_NAME') || define('DATABASE_NAME','company');
+defined('DATABASE_NAME') || define('DATABASE_NAME','uza');
 
 // Database User
 defined('DATABASE_USER') || define('DATABASE_USER','root');

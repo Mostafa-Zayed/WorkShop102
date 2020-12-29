@@ -1,5 +1,7 @@
-<?php include_once 'app.php'; ?>
-<?php include_once  INCLUDE_PATH.'header.php'; ?>
+<?php include_once 'config.php'; ?>
+<?php include_once CORE_PATH.'connect.php'; ?>
+<?php include_once CORE_PATH.'functions.php'; ?>
+<?php include_once  APP_INCLUDES_PATH.'header.php'; ?>
 
     <!-- ***** Breadcrumb Area Start ***** -->
     <div class="breadcrumb-area">
