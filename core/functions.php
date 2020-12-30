@@ -75,3 +75,8 @@ function print_Data($data) {
 	print_r($data);
 	echo '</pre>';
 }
+
+function checkImageExtension($iamgeextension,$types) {
+if(in_array())
+	return 1;
+}
