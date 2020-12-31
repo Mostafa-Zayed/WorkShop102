@@ -3,8 +3,12 @@ include_once 'config.php';
 include_once 'core/connect.php';
 include_once 'core/functions.php';
 
-$name='ahmed'; 
-echo $name;
+
+//var_data(getData('users','id,name'));
+var_data(getOneRowByID('users','id,name',1));
+
+//$name='ahmed'; 
+//echo $name;
 //$names = ['id','name','email'];
 //echo prepare_columns(4);
 

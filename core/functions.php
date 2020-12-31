@@ -4,35 +4,39 @@
 // Database Functions
 
 // get data
-function get_data(string $tableName, $columns = '*', $condition = '') {
+function getData(string $tableName, $columns = '*', string $condition = '') {
 	global $connection;
-	$sql_statment = '';
-	$columns = prepare_columns($columns);
-	if(empty($condition)) {
-		$sql_statment = "SELECT $columns FROM `$tableName`";	
-	}else {
-		$sql_statment = "SELECT $columns FROM `$tableName` WHERE $condition";	
-	}
-	
-
-	$result = mysqli_query($connection,$sql_statment);
-	if(mysqli_num_rows($result) > 0 ) 
+	$queryStatment = buildQuery($tableName, $columns, $condition);
+	$result = mysqli_query($connection,$queryStatment);
+	if(mysqli_num_rows($result) > 0 )
 		return mysqli_fetch_all($result,MYSQLI_ASSOC);
-	else 
+	else
 		return array();
 }
 
-function get_row(string $tableName,$columns = '*',$condition){
+function buildQuery(string $tableName, $columns = '*', string $condition = '') {
+	return empty($condition) ? "SELECT ".buildColumns($columns)." FROM `$tableName`" : 	$sql_statment = "SELECT ".buildColumns($columns)." FROM `$tableName` WHERE $condition";
+
+}
+function getOneRow(string $tableName, $columns = '*', string $condition = ''){
 	global $connection;
-	$columns = prepare_columns($columns);
-	$sql_statment = "SELECT $columns FROM `$tableName` WHERE $condition";
-	$result = mysqli_query($connection,$sql_statment);
+	$queryStatment = buildQuery($tableName, $columns, $condition)." LIMIT 1";
+	$result = mysqli_query($connection,$queryStatment);
 	if(mysqli_num_rows($result) > 0 )
 		return mysqli_fetch_assoc($result);
-	else 
-		return arrray();
+	else
+		return array();
 }
 
+function getRowByID(string $tableName, $columns = '*', int $id){
+	global $connection;
+	$queryStatment = buildQuery($tableName, $columns, '`id` = '.$id)." LIMIT 1";
+	$result = mysqli_query($connection,$queryStatment);
+	if(mysqli_num_rows($result) > 0 )
+		return mysqli_fetch_assoc($result);
+	else
+		return array();
+}
 function insert_row(string $tableName,array $data) {
 	$columns = '';
 	$values  = '';
@@ -44,8 +48,19 @@ function insert_row(string $tableName,array $data) {
 	$sql_statment .= "($columns) VALUES (".rtrim($values,',').")";
 }
 
-function prepare_columns($columns_name) {
-	$new_columns = '';
+function buildColumns($columns) {
+
+	return is_array($columns) ? prepareColumns($columns) : (is_string($columns) && ($columns === '*') ? '*' : prepareColumns(explode(',',$columns)));
+}
+
+function prepareColumns(array $columns) {
+	$selectedColumns = '';
+	foreach($columns as $column)
+		$selectedColumns .= "`$column`,";
+	return rtrim($selectedColumns,',');
+}
+
+/*
 	if(is_array($columns_name)) {
 		foreach($columns_name as $column) {
 			$new_columns .= '`'.$column.'`,';
@@ -61,7 +76,7 @@ function prepare_columns($columns_name) {
 
 	return rtrim($new_columns,',');
 }
-
+*/
 // show Data by var_dump Func for testing only 
 function var_Data($data) {
 	echo '<pre>';
